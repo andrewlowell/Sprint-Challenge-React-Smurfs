@@ -15,3 +15,14 @@ a {
 .selected {
   text-decoration: underline;
 }
+.Smurf {
+  padding: 10px;
+  border: 1px solid black;
+  min-width: 500px;
+}
+.Smurfs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

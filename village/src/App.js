@@ -5,6 +5,7 @@ import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import TopBar from './components/TopBar';
+import OneSmurf from './components/OneSmurf';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +26,6 @@ class App extends Component {
     axios
     .get('http://localhost:3333/smurfs')
     .then(res => {
-      console.log('smurfs:', res.data);
       this.setState({smurfs: res.data});
     })
     .catch(err => {
@@ -37,8 +37,9 @@ class App extends Component {
     return (
       <div className="App">
         <TopBar />
-        <Route exact path="/" render={ () => <Smurfs smurfs={this.state.smurfs} /> } />
+        <Route exact path="/" render={ () => <Smurfs smurfs={this.state.smurfs} getSmurfs={this.getSmurfs} /> } />
         <Route path="/smurf-form" render={ () => <SmurfForm getSmurfs={this.getSmurfs} /> } />
+        <Route path="/smurf/:id" render={() => <OneSmurf /> } />
       </div>
     );
   }
