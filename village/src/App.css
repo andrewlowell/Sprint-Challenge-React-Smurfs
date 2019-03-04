@@ -1,3 +1,28 @@
 .App {
   text-align: center;
 }
+.topBar {
+  width: 100%;
+  height: auto;
+  background-color: lightgray;
+}
+a {
+  text-decoration: none;
+  margin: 20px;
+  padding: 10px;
+  font-size: 30px;
+}
+.selected {
+  text-decoration: underline;
+}
+.Smurf {
+  padding: 10px;
+  border: 1px solid black;
+  min-width: 500px;
+}
+.Smurfs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
